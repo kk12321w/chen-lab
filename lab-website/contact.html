@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 智能计算与科学实验室</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-info-item svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            fill: var(--primary-color);
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        button[type="submit"] {
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">智能计算与科学实验室</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="research.html">研究方向</a></li>
+                    <li><a href="team.html">团队成员</a></li>
+                    <li><a href="publications.html">发表论文</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>加入我们 / 联系我们</h1>
+        
+        <div class="contact-container">
+            <div>
+                <h2>招生信息</h2>
+                <p>我们长期招收对人工智能、生物信息学感兴趣的<strong>硕士、博士研究生</strong>。</p>
+                <p><strong>基本要求：</strong></p>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>计算机、数学、统计学或相关专业背景。</li>
+                    <li>良好的编程能力（Python/C++）。</li>
+                    <li>较强的英语读写能力。</li>
+                    <li>对科学研究有热情，具备良好的团队合作精神。</li>
+                </ul>
+                <p>请将个人简历、成绩单和代表性论文（如有）发送至张教授邮箱。</p>
+
+                <h2 style="margin-top: 40px;">联系方式</h2>
+                <div class="contact-info-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <div>
+                        <strong>地址：</strong><br>
+                        XX省XX市XX区XX路XX号<br>
+                        XX大学 计算机学院 科技楼XXX室
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <div>
+                        <strong>邮箱：</strong><br>
+                        contact@lab-email.edu.cn
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>发送消息</h2>
+                <form onsubmit="event.preventDefault(); alert('此功能为演示。请直接发送邮件联系我们。');">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">电子邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">主题</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">内容</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">发送</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 智能计算与科学实验室. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
